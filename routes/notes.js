@@ -1,6 +1,6 @@
 const fb = require("express").Router();
-const uuid = require("uuid");
 const fs = require("fs");
+const { v4: uuidv4 } = require("uuid");
 
 // GET Route for retrieving past notes
 fb.get("/", (req, res) => {
@@ -25,6 +25,7 @@ fb.post("/", (req, res) => {
     const newNote = {
       title,
       text,
+      review_id: uuidv4(),
     };
     fs.readFile("./db/db.json", "utf8", (err, data) => {
       if (err) {
