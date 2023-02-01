@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require("uuid");
 
 // GET Route for retrieving past notes
 fb.get("/", (req, res) => {
-  fs.readFile("./db/db.json", "utf8", (err, data) => {
+  fs.readFile("./db/db.json", (err, data) => {
     if (err) {
       console.log(err);
     } else {
@@ -27,7 +27,7 @@ fb.post("/", (req, res) => {
       text,
       review_id: uuidv4(),
     };
-    fs.readFile("./db/db.json", "utf8", (err, data) => {
+    fs.readFile("./db/db.json", (err, data) => {
       if (err) {
         console.error(err);
       } else {
