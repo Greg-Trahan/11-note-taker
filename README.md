@@ -5,6 +5,8 @@ Due: 02FEB2023
 
 ## Description
 
+Click [here](https://express-practice-note-taker.herokuapp.com/) to see the deployed webpage.
+
 The goal of this application is to allow the user to take and review notes which will be stored on a server.
 
 ## Usage
